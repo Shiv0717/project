@@ -15,8 +15,8 @@ export default function Sidebar() {
   // ---------------- MENU ARRAY ----------------
   const menu = [
     {
-      label: "Announcements",
-      path: "/announcements",
+      label: "Community Posts",
+      path: "/posts",
       icon: Bell,
       bg: "bg-orange-100 group-hover:bg-orange-200",
       activeBg: "bg-white/20",
@@ -91,7 +91,7 @@ export default function Sidebar() {
                   />
                 </div>
 
-                {item.label}
+                <span className="flex-1 min-w-0 truncate">{item.label}</span>
 
                 <ChevronRight
                   size={16}

@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Dashboard /> },
       // Announcements
-      { path: "announcements", element: <Announcements /> },
+      { path: "posts", element: <Announcements /> },
       // Members
       { path: "members", element: <Members /> },
       // ---------------- PETS ROUTES ----------------
