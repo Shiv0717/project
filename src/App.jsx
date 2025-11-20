@@ -15,7 +15,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { index: true, element: <Dashboard /> },
       // Announcements
       { path: "posts", element: <Announcements /> },
       // Members
