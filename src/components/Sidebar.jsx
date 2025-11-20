@@ -52,8 +52,8 @@ export default function Sidebar() {
     `flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-all duration-200 group relative
      ${
        isActive
-         ? "bg-white text-slate-800 shadow-lg shadow-slate-200 border border-slate-100"
-         : "text-slate-600 hover:bg-white hover:text-slate-800 hover:shadow-md hover:border hover:border-slate-100"
+         ? "bg-white text-slate-800 shadow-slate-200 border border-slate-100"
+         : "text-slate-600 hover:bg-white hover:text-slate-800 m-2 hover:border hover:border-slate-100"
      }`;
 
   return (
@@ -98,14 +98,7 @@ export default function Sidebar() {
                   />
                 </div>
 
-                <span className="flex-1 min-w-0 text-sm font-medium leading-tight">
-                  {item.label.split(' ').map((word, index) => (
-                    <span key={index} className="block leading-tight">
-                      {word}
-                    </span>
-                  ))}
-                </span>
-
+                <span className="flex-1 min-w-0 text-[15px]">{item.label}</span>
                 <ChevronRight
                   size={16}
                   className={`ml-auto transition-all duration-200 ${

@@ -15,11 +15,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      // Announcements
       { path: "posts", element: <Announcements /> },
-      // Members
       { path: "members", element: <Members /> },
-      // ---------------- PETS ROUTES ----------------
       { path: "pets", element: <Pets /> },
       { path: "pets/domestic", element:  <Pets /> },
       { path: "pets/wildlife", element:  <Pets />},
