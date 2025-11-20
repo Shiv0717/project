@@ -305,7 +305,7 @@ const MemberCard = ({ member }) => {
 
         <div className="w-full space-y-3 mb-4">
           <div className="flex items-center gap-3 p-3 border-b border-gray-100">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center shrink-0">
               <Mail size={16} className="text-blue-600" />
             </div>
             <div className="text-left min-w-0">
@@ -315,7 +315,7 @@ const MemberCard = ({ member }) => {
           </div>
           
           <div className="flex items-center gap-3 p-3">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center shrink-0">
               <Phone size={16} className="text-green-600" />
             </div>
             <div className="text-left min-w-0">

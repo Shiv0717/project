@@ -61,7 +61,7 @@ export default function Sidebar() {
       {/* Header */}
       <div className="mb-10 pt-2">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-sky-400 rounded-2xl flex items-center justify-center ">
+          <div className="w-12 h-12 bg-linear-to-br from-emerald-400 to-sky-400 rounded-2xl flex items-center justify-center ">
             <span className="text-white font-bold text-lg">R</span>
           </div>
           <div>
@@ -69,7 +69,7 @@ export default function Sidebar() {
             <p className="text-slate-500 text-sm">Community Manager</p>
           </div>
         </div>
-        <div className="w-full h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent"></div>
+        <div className="w-full h-px bg-linear-to-r from-transparent via-slate-200 to-transparent"></div>
       </div>
 
       <nav className="space-y-1">

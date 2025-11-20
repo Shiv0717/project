@@ -192,7 +192,7 @@ export default function Pets() {
           {/* Domestic Card */}
           <Link
             to="/pets/domestic"
-            className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200 hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group"
+            className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-linear-to-br from-blue-50 to-indigo-100 border border-blue-200 hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group"
           >
             <div className="flex items-center gap-4 sm:gap-6">
               <div className="p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-2xl bg-white shadow-lg group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
@@ -207,14 +207,14 @@ export default function Pets() {
                   <span>Family friendly</span>
                 </div>
               </div>
-              <ChevronRight size={20} className="sm:size-6 text-blue-600 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
+              <ChevronRight size={20} className="sm:size-6 text-blue-600 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300 shrink-0" />
             </div>
           </Link>
 
           {/* Wildlife Card */}
           <Link
             to="/pets/wildlife"
-            className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-amber-50 to-orange-100 border border-amber-200 hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group"
+            className="p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-linear-to-br from-amber-50 to-orange-100 border border-amber-200 hover:shadow-xl sm:hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 sm:hover:-translate-y-2 group"
           >
             <div className="flex items-center gap-4 sm:gap-6">
               <div className="p-3 sm:p-4 md:p-5 rounded-lg sm:rounded-2xl bg-white shadow-lg group-hover:scale-105 sm:group-hover:scale-110 transition-transform duration-300">
@@ -229,7 +229,7 @@ export default function Pets() {
                   <span>Protected species</span>
                 </div>
               </div>
-              <ChevronRight size={20} className="sm:size-6 text-amber-600 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300 flex-shrink-0" />
+              <ChevronRight size={20} className="sm:size-6 text-amber-600 group-hover:translate-x-1 sm:group-hover:translate-x-2 transition-transform duration-300 shrink-0" />
             </div>
           </Link>
         </div>
@@ -277,7 +277,7 @@ export default function Pets() {
                         <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-1 line-clamp-1">{pet.name}</h3>
                         <p className="text-slate-600 text-sm sm:text-base line-clamp-1">{pet.breed}</p>
                       </div>
-                      <div className="p-2 rounded-lg bg-slate-100 group-hover:bg-blue-100 transition-colors flex-shrink-0 ml-3">
+                      <div className="p-2 rounded-lg bg-slate-100 group-hover:bg-blue-100 transition-colors shrink-0 ml-3">
                         <TypeIcon size={18} className="sm:size-5 text-slate-600 group-hover:text-blue-600" />
                       </div>
                     </div>

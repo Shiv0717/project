@@ -298,7 +298,7 @@ export default function Documents() {
                             </div>
                           </div>
                         </div>
-                        <button className="p-1 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors flex-shrink-0">
+                        <button className="p-1 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors shrink-0">
                           <MoreVertical size={16} className="text-gray-400" />
                         </button>
                       </div>

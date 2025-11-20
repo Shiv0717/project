@@ -184,7 +184,7 @@ const Announcements = () => {
                     key={item.id} 
                     className="flex items-start gap-3 sm:gap-4 py-3 px-2 rounded-lg sm:rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all duration-200"
                   >
-                    <div className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold flex-shrink-0 text-sm`}>
+                    <div className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold shrink-0 text-sm`}>
                       {item.department}
                     </div>
                     <div className="flex-1 min-w-0">
