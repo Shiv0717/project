@@ -8,10 +8,10 @@ export default function Layout() {
     <div className="flex h-screen bg-slate-50 justify-center">
 
       {/* Wrapper */}
-      <div className="w-full max-w-9xl flex gap-2 px-1">
+      <div className="w-full max-w-9xl mx-auto flex gap-2 px-1">
 
         {/* Desktop Sidebar */}
-        <div className="hidden md:block mt-6">
+        <div className="hidden md:block mt-6 ml-1">
           <Sidebar />
         </div>
 
