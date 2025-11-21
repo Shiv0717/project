@@ -13,7 +13,7 @@ import {
   Eye,
   Users
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 const Announcements = () => {
   const [likedPosts, setLikedPosts] = useState(new Set());
   const [savedPosts, setSavedPosts] = useState(new Set());
@@ -181,9 +181,12 @@ const Announcements = () => {
                   alt="Your profile"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
-                <button className="flex-1 text-left p-3 sm:p-4 bg-gray-50 hover:bg-gray-100 rounded-xl sm:rounded-2xl text-gray-500 hover:text-gray-700 transition-colors duration-200">
-                  Start a post...
-                </button>
+               <Link to="/create-post" className="flex-1">
+  <button className="w-full text-left p-3 sm:p-4 bg-gray-50 hover:bg-gray-100 rounded-xl sm:rounded-2xl text-gray-500 hover:text-gray-700 transition-colors duration-200">
+    Start a post...
+  </button>
+</Link>
+
               </div>
              
             </div>
@@ -261,23 +264,30 @@ const Announcements = () => {
                 </div>
                 
                 <div className="space-y-3 sm:space-y-4">
-                  {recentAnnouncements.map((item) => (
-                    <div 
-                      key={item.id} 
-                      className="flex items-start gap-3 sm:gap-4 p-3 rounded-lg sm:rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all duration-200 cursor-pointer"
-                    >
-                      <div className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold shrink-0 text-sm`}>
-                        {item.department}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="font-medium text-gray-900 mb-1 text-sm sm:text-base line-clamp-2">
-                          {item.title}
-                        </h4>
-                        <p className="text-xs sm:text-sm text-gray-500">{item.date}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+  {recentAnnouncements.map((item) => (
+    <Link 
+      key={item.id} 
+      to={`/announcement/${item.id}`}
+      className="block"
+    >
+      <div 
+        className="flex items-start gap-3 sm:gap-4 p-3 rounded-lg sm:rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all duration-200 cursor-pointer"
+      >
+        <div className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold shrink-0 text-sm`}>
+          {item.department}
+        </div>
+
+        <div className="flex-1 min-w-0">
+          <h4 className="font-medium text-gray-900 mb-1 text-sm sm:text-base line-clamp-2">
+            {item.title}
+          </h4>
+          <p className="text-xs sm:text-sm text-gray-500">{item.date}</p>
+        </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
               </div>
 
            

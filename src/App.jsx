@@ -1,14 +1,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./layout/MainLayout";
-
 import Dashboard from "./pages/Dashboard";
 import Announcements from "./pages/Announcements";
 import Members from "./pages/Members";
-
 import Pets from "./pages/Pets";
 import Documents from "./pages/Documents";
-
+import CreatePost from "./pages/CreatePost";
+import AnnouncementDetails from "./pages/AnnouncementDetails";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +15,8 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { path: "posts", element: <Announcements /> },
+      { path: "create-post", element:<CreatePost /> },
+      { path: "/announcement/:id", element:<AnnouncementDetails /> },
       { path: "members", element: <Members /> },
       { path: "pets", element: <Pets /> },
       { path: "pets/domestic", element:  <Pets /> },
