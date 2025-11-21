@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { User, Calendar, Clock, Building } from "lucide-react";
+import { User, Calendar } from "lucide-react";
 
 export default function AnnouncementDetails() {
   const { id } = useParams();
@@ -16,7 +16,7 @@ export default function AnnouncementDetails() {
           </div>
         </div>
 
-        <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+        <div className="bg-white  overflow-hidden ">
           {/* Announcement Image */}
           <div className="relative h-64 sm:h-80 lg:h-96 overflow-hidden">
             <img 
@@ -24,14 +24,29 @@ export default function AnnouncementDetails() {
               alt="Announcement" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
           </div>
 
           {/* Announcement Content */}
           <div className="p-6 sm:p-8">
+            {/* Title */}
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+              Office Reopening Guidelines
+            </h2>
             
-            
-            <div className="prose max-w-none text-gray-600 space-y-4 text-sm sm:text-base">
+            {/* Meta Info */}
+            <div className="flex items-center gap-6 mb-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <User size={18} className="text-gray-400" />
+                <span>Sarah Johnson</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar size={18} className="text-gray-400" />
+                <span>December 15, 2024</span>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div className="space-y-4 text-gray-700 text-sm sm:text-base leading-relaxed">
               <p>
                 We are pleased to announce that our office will be reopening starting next Monday, 
                 with new health and safety guidelines in place to ensure the well-being of all employees.
@@ -51,33 +66,6 @@ export default function AnnouncementDetails() {
               <p>
                 We appreciate your cooperation and look forward to welcoming everyone back safely.
               </p>
-            </div>
-
-            {/* Additional Info with Icons */}
-            <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-200">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-                <div className="flex items-center gap-3 p-3 bg-blue-50 rounded-lg border border-blue-100">
-                  <div className="p-2 bg-blue-100 rounded-lg">
-                    <User size={20} className="text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xs font-semibold text-blue-900 uppercase tracking-wide">Posted By</h3>
-                    <p className="text-sm font-medium text-blue-700">Sarah Johnson</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 p-3 bg-green-50 rounded-lg border border-green-100">
-                  <div className="p-2 bg-green-100 rounded-lg">
-                    <Calendar size={20} className="text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xs font-semibold text-green-900 uppercase tracking-wide">Date Posted</h3>
-                    <p className="text-sm font-medium text-green-700">Dec 15, 2024</p>
-                  </div>
-                </div>
-
-               
-              </div>
             </div>
           </div>
         </div>
