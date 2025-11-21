@@ -185,22 +185,7 @@ const Announcements = () => {
                   Start a post...
                 </button>
               </div>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2 sm:gap-4">
-                  <button className="flex items-center gap-2 p-2 sm:p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                    <Image size={20} className="text-blue-500" />
-                    <span className="text-sm text-gray-600 hidden sm:block">Photo</span>
-                  </button>
-                  <button className="flex items-center gap-2 p-2 sm:p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                    <Video size={20} className="text-green-500" />
-                    <span className="text-sm text-gray-600 hidden sm:block">Video</span>
-                  </button>
-                  <button className="flex items-center gap-2 p-2 sm:p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200">
-                    <Calendar size={20} className="text-orange-500" />
-                    <span className="text-sm text-gray-600 hidden sm:block">Event</span>
-                  </button>
-                </div>
-              </div>
+             
             </div>
 
             {/* Posts */}
@@ -222,25 +207,17 @@ const Announcements = () => {
                         <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
                           {announcement.author.name}
                         </h3>
-                        <p className="text-gray-600 text-xs sm:text-sm">{announcement.author.role}</p>
-                        <p className="text-gray-500 text-xs mt-1">{announcement.author.date} • <Eye size={12} className="inline mr-1" /> {announcement.views} views</p>
+                        
                       </div>
                     </div>
-                    <button className="p-2 hover:bg-gray-100 rounded-lg transition-colors">
-                      <MoreHorizontal size={20} className="text-gray-400" />
-                    </button>
+                    
                   </div>
                 </div>
 
                 {/* Post Content */}
                 <div className="p-4 sm:p-6">
                   <div className="mb-3">
-                    <span className={`inline-block ${announcement.tagColor} text-white px-2 sm:px-3 py-1 rounded-full text-xs font-semibold mb-2`}>
-                      {announcement.tag}
-                    </span>
-                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
-                      {announcement.title}
-                    </h3>
+                   
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                       {announcement.description}
                     </p>
@@ -255,56 +232,16 @@ const Announcements = () => {
                     />
                   </div>
 
-                  {/* Engagement Stats */}
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-3">
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <div className="flex -space-x-2">
-                          <div className="w-6 h-6 bg-blue-500 rounded-full border-2 border-white"></div>
-                          <div className="w-6 h-6 bg-green-500 rounded-full border-2 border-white"></div>
-                          <div className="w-6 h-6 bg-yellow-500 rounded-full border-2 border-white"></div>
-                        </div>
-                        <span>{announcement.likes}</span>
-                      </div>
-                      <span>{announcement.comments} comments</span>
-                      <span>{announcement.shares} shares</span>
-                    </div>
-                  </div>
-
+                 
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between border-t border-gray-100 pt-3">
-                    <button 
-                      onClick={() => handleLike(announcement.id)}
-                      className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors duration-200 flex-1 justify-center ${
-                        likedPosts.has(announcement.id) 
-                          ? 'text-blue-600 bg-blue-50' 
-                          : 'text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      <Heart size={18} fill={likedPosts.has(announcement.id) ? "currentColor" : "none"} />
-                      <span className="text-sm">Like</span>
-                    </button>
-                    
+                  
                     <button className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors duration-200 flex-1 justify-center">
                       <MessageCircle size={18} />
                       <span className="text-sm">Comment</span>
                     </button>
                     
-                    <button className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors duration-200 flex-1 justify-center">
-                      <Share size={18} />
-                      <span className="text-sm">Share</span>
-                    </button>
-                    
-                    <button 
-                      onClick={() => handleSave(announcement.id)}
-                      className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg transition-colors duration-200 ${
-                        savedPosts.has(announcement.id) 
-                          ? 'text-blue-600 bg-blue-50' 
-                          : 'text-gray-600 hover:bg-gray-50'
-                      }`}
-                    >
-                      <Bookmark size={18} fill={savedPosts.has(announcement.id) ? "currentColor" : "none"} />
-                    </button>
+                
                   </div>
                 </div>
               </div>
