@@ -16,14 +16,14 @@ export default function Layout() {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 lg:mt-6 overflow-auto p-2 bg-white border border-gray-100">
+        <div className="flex-1 lg:mt-6 overflow-auto p-2 bg-white border border-gray-100 mb-14 lg:mb-0">
           <Outlet />
         </div>
 
       </div>
 
       {/* Mobile Bottom Bar */}
-      <div className="md:hidden">
+      <div className="md:hidden ">
         <BottomBar />
       </div>
 

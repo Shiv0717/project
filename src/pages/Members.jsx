@@ -84,7 +84,7 @@ const Members = () => {
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900">Team</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {teamMembers.map((member) => (
               <div
                 key={member.id}
@@ -107,7 +107,7 @@ const Members = () => {
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900">All Members</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
             {allMembers.map((member) => (
               <div
                 key={member.id}
