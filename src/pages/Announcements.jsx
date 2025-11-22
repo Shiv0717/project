@@ -1,18 +1,5 @@
 import React, { useState } from "react";
-import { 
-  Plus, 
-  ArrowRight, 
-  Heart, 
-  MessageCircle, 
-  Share, 
-  Bookmark,
-  MoreHorizontal,
-  Image,
-  Video,
-  Calendar,
-  Eye,
-  Users
-} from "lucide-react";
+import {Plus, MessageCircle,} from "lucide-react";
 import { Link } from "react-router-dom";
 const Announcements = () => {
   const [likedPosts, setLikedPosts] = useState(new Set());
@@ -23,8 +10,10 @@ const Announcements = () => {
     {
       id: 1,
       title: "How Do We Choose Our Political Leaders?",
-      description: "Wherever you might live, election time takes over everything — airwaves, billboards, and conversations. Let's explore how political campaigns shape our choices.",
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80",
+      description:
+        "Wherever you might live, election time takes over everything — airwaves, billboards, and conversations. Let's explore how political campaigns shape our choices.",
+      image:
+        "https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1000&q=80",
       tag: "Leadership",
       tagColor: "bg-blue-500",
       author: {
@@ -33,18 +22,21 @@ const Announcements = () => {
         avatarColor: "bg-blue-500",
         date: "Sep 12, 2023",
         role: "Political Analyst",
-        avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80"
+        avatar:
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&q=80",
       },
       likes: 42,
       comments: 8,
       shares: 3,
-      views: 1250
+      views: 1250,
     },
     {
       id: 2,
       title: "Is Social Media the Bad Guy?",
-      description: "We're living in an age of hyper-connectivity. It's connected people from all corners of the planet and given us new ways to share — but also challenges to face.",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80",
+      description:
+        "We're living in an age of hyper-connectivity. It's connected people from all corners of the planet and given us new ways to share — but also challenges to face.",
+      image:
+        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80",
       tag: "Technology",
       tagColor: "bg-green-500",
       author: {
@@ -53,18 +45,21 @@ const Announcements = () => {
         avatarColor: "bg-green-500",
         date: "Sep 8, 2023",
         role: "Tech Writer",
-        avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80"
+        avatar:
+          "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=100&q=80",
       },
       likes: 28,
       comments: 12,
       shares: 5,
-      views: 890
+      views: 890,
     },
     {
       id: 3,
       title: "How Team Collaboration Boosts Productivity",
-      description: "A look at how cross-department collaboration and open communication can transform workplace efficiency.",
-      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80",
+      description:
+        "A look at how cross-department collaboration and open communication can transform workplace efficiency.",
+      image:
+        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80",
       tag: "Productivity",
       tagColor: "bg-purple-500",
       author: {
@@ -73,18 +68,21 @@ const Announcements = () => {
         avatarColor: "bg-purple-500",
         date: "Sep 5, 2023",
         role: "Product Manager",
-        avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80"
+        avatar:
+          "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100&q=80",
       },
       likes: 35,
       comments: 6,
       shares: 2,
-      views: 1100
+      views: 1100,
     },
     {
       id: 4,
       title: "The Importance of Mental Health in the Workplace",
-      description: "Mental well-being is just as important as productivity. Learn how organizations can create better support systems for employees.",
-      image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
+      description:
+        "Mental well-being is just as important as productivity. Learn how organizations can create better support systems for employees.",
+      image:
+        "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
       tag: "Wellness",
       tagColor: "bg-orange-500",
       author: {
@@ -93,13 +91,14 @@ const Announcements = () => {
         avatarColor: "bg-orange-500",
         date: "Aug 28, 2023",
         role: "HR Director",
-        avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80"
+        avatar:
+          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80",
       },
       likes: 67,
       comments: 15,
       shares: 8,
-      views: 2100
-    }
+      views: 2100,
+    },
   ];
 
   const recentAnnouncements = [
@@ -108,29 +107,29 @@ const Announcements = () => {
       title: "Office reopening guidelines",
       department: "HR",
       avatarColor: "bg-pink-500",
-      date: "2 days ago"
+      date: "2 days ago",
     },
     {
       id: 2,
       title: "New software licenses available",
       department: "IT",
       avatarColor: "bg-blue-500",
-      date: "5 days ago"
+      date: "5 days ago",
     },
     {
       id: 3,
       title: "Quarterly budget updates",
       department: "FN",
       avatarColor: "bg-green-500",
-      date: "1 week ago"
+      date: "1 week ago",
     },
     {
       id: 4,
       title: "Upcoming company events",
       department: "MK",
       avatarColor: "bg-orange-500",
-      date: "2 weeks ago"
-    }
+      date: "2 weeks ago",
+    },
   ];
 
   const handleLike = (postId) => {
@@ -159,8 +158,12 @@ const Announcements = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-200">
           <div className="mb-4 lg:mb-0">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Feed</h1>
-            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Stay updated with the latest news and updates</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Feed
+            </h1>
+            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
+              Stay updated with the latest news and updates
+            </p>
           </div>
           <div className="flex gap-3">
             <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">
@@ -176,32 +179,30 @@ const Announcements = () => {
             {/* Create Post Card */}
             <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 p-4 sm:p-6">
               <div className="flex items-center gap-3 sm:gap-4 mb-4">
-                <img 
+                <img
                   src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100&q=80"
                   alt="Your profile"
                   className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                 />
-               <Link to="/create-post" className="flex-1">
-  <button className="w-full text-left p-3 sm:p-4 bg-gray-50 hover:bg-gray-100 rounded-xl sm:rounded-2xl text-gray-500 hover:text-gray-700 transition-colors duration-200">
-    Start a post...
-  </button>
-</Link>
-
+                <Link to="/create-post" className="flex-1">
+                  <button className="w-full text-left p-3 sm:p-4 bg-gray-50 hover:bg-gray-100 rounded-xl sm:rounded-2xl text-gray-500 hover:text-gray-700 transition-colors duration-200">
+                    Start a post...
+                  </button>
+                </Link>
               </div>
-             
             </div>
 
             {/* Posts */}
             {mainAnnouncements.map((announcement) => (
-              <div 
-                key={announcement.id} 
+              <div
+                key={announcement.id}
                 className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-lg sm:hover:shadow-xl"
               >
                 {/* Author Header */}
                 <div className="p-4 sm:p-6 border-b border-gray-100">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
-                      <img 
+                      <img
                         src={announcement.author.avatar}
                         alt={announcement.author.name}
                         className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
@@ -210,17 +211,14 @@ const Announcements = () => {
                         <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
                           {announcement.author.name}
                         </h3>
-                        
                       </div>
                     </div>
-                    
                   </div>
                 </div>
 
                 {/* Post Content */}
                 <div className="p-4 sm:p-6">
                   <div className="mb-3">
-                   
                     <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                       {announcement.description}
                     </p>
@@ -228,23 +226,19 @@ const Announcements = () => {
 
                   {/* Post Image */}
                   <div className="relative rounded-lg sm:rounded-xl overflow-hidden mb-4">
-                    <img 
-                      src={announcement.image} 
+                    <img
+                      src={announcement.image}
                       alt={announcement.title}
                       className="w-full h-48 sm:h-64 object-cover transition-transform duration-500 hover:scale-105"
                     />
                   </div>
 
-                 
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between border-t border-gray-100 pt-3">
-                  
                     <button className="flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors duration-200 flex-1 justify-center">
                       <MessageCircle size={18} />
                       <span className="text-sm">Comment</span>
                     </button>
-                    
-                
                   </div>
                 </div>
               </div>
@@ -257,40 +251,44 @@ const Announcements = () => {
               {/* Recent Announcements */}
               <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 p-4 sm:p-6">
                 <div className="flex items-center justify-between mb-4 sm:mb-6">
-                  <h2 className="text-lg sm:text-xl font-semibold text-gray-900">Recent Announcements</h2>
-                  <a href="#" className="text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium">
+                  <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
+                    Recent Announcements
+                  </h2>
+                  <a
+                    href="#"
+                    className="text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium"
+                  >
                     View all
                   </a>
                 </div>
-                
+
                 <div className="space-y-3 sm:space-y-4">
-  {recentAnnouncements.map((item) => (
-    <Link 
-      key={item.id} 
-      to={`/announcement/${item.id}`}
-      className="block"
-    >
-      <div 
-        className="flex items-start gap-3 sm:gap-4 p-3 rounded-lg sm:rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all duration-200 cursor-pointer"
-      >
-        <div className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold shrink-0 text-sm`}>
-          {item.department}
-        </div>
+                  {recentAnnouncements.map((item) => (
+                    <Link
+                      key={item.id}
+                      to={`/announcement/${item.id}`}
+                      className="block"
+                    >
+                      <div className="flex items-start gap-3 sm:gap-4 p-3 rounded-lg sm:rounded-xl border border-transparent hover:border-gray-200 hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+                        <div
+                          className={`${item.avatarColor} w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center text-white font-semibold shrink-0 text-sm`}
+                        >
+                          {item.department}
+                        </div>
 
-        <div className="flex-1 min-w-0">
-          <h4 className="font-medium text-gray-900 mb-1 text-sm sm:text-base line-clamp-2">
-            {item.title}
-          </h4>
-          <p className="text-xs sm:text-sm text-gray-500">{item.date}</p>
-        </div>
-      </div>
-    </Link>
-  ))}
-</div>
-
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-medium text-gray-900 mb-1 text-sm sm:text-base line-clamp-2">
+                            {item.title}
+                          </h4>
+                          <p className="text-xs sm:text-sm text-gray-500">
+                            {item.date}
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-
-           
             </div>
           </div>
         </div>

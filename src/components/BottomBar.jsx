@@ -1,4 +1,4 @@
-// components/BottomBar.jsx
+
 import { NavLink, useLocation } from "react-router-dom";
 import { Bell, Users, Dog, FileText } from "lucide-react";
 

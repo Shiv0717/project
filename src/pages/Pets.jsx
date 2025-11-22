@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import {
-  Dog,
-  Plus,
-} from "lucide-react";
+import { Dog, Plus } from "lucide-react";
 
 export default function Pets() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -76,7 +73,8 @@ export default function Pets() {
     const matchesSearch =
       pet.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       pet.breed.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = activeFilter === "all" || pet.category === activeFilter;
+    const matchesFilter =
+      activeFilter === "all" || pet.category === activeFilter;
     return matchesSearch && matchesFilter;
   });
 
@@ -86,12 +84,13 @@ export default function Pets() {
         {/* Page Header with Border */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-200">
           <div className="mb-4 lg:mb-0">
-            <h1 className="text-2xl sm:text-3xl font-bold text-black">Pets Directory</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-black">
+              Pets Directory
+            </h1>
             <p className="text-slate-500 mt-1 sm:mt-2 text-sm sm:text-base">
               Discover and manage all pets in our community
             </p>
           </div>
-         
         </div>
 
         {/* Filters with Border */}
@@ -146,7 +145,10 @@ export default function Pets() {
 
         {filteredPets.length === 0 && (
           <div className="text-center py-12 sm:py-16 bg-white rounded-xl sm:rounded-2xl border border-gray-200">
-            <Dog size={48} className="sm:size-16 mx-auto text-slate-300 mb-3 sm:mb-4" />
+            <Dog
+              size={48}
+              className="sm:size-16 mx-auto text-slate-300 mb-3 sm:mb-4"
+            />
             <h3 className="text-lg sm:text-xl font-semibold text-slate-600 mb-1 sm:mb-2">
               No pets found
             </h3>

@@ -8,21 +8,25 @@ export default function CreatePost() {
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6 sm:mb-8 pb-4 sm:pb-6 border-b border-gray-200">
           <div className="mb-4 lg:mb-0">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Create New Post</h1>
-            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">Share your thoughts and images with the community</p>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+              Create New Post
+            </h1>
+            <p className="text-gray-600 mt-1 sm:mt-2 text-sm sm:text-base">
+              Share your thoughts and images with the community
+            </p>
           </div>
         </div>
 
-        <div className="bg-white rounded-xl sm:rounded-2xl border border-gray-200 p-6 sm:p-8">
+        <div className="bg-white  p-6 sm:p-8">
           <form className="space-y-6">
             {/* Description Field */}
             <div>
               <label className="block text-sm sm:text-base font-medium text-gray-900 mb-2 sm:mb-3">
                 Description
               </label>
-              <textarea 
-                className="w-full border border-gray-300 p-3 sm:p-4 rounded-lg sm:rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
-                rows="6" 
+              <textarea
+                className="w-full border border-gray-300 p-3 sm:p-4  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                rows="6"
                 placeholder="What's on your mind? Share your thoughts..."
               ></textarea>
             </div>
@@ -32,8 +36,11 @@ export default function CreatePost() {
               <label className="block text-sm sm:text-base font-medium text-gray-900 mb-2 sm:mb-3">
                 Add Image
               </label>
-              <div className="border-2 border-dashed border-gray-300 rounded-lg sm:rounded-xl p-6 sm:p-8 text-center hover:border-blue-400 transition-colors duration-200 cursor-pointer">
-                <Upload className="mx-auto text-gray-400 mb-3 sm:mb-4" size={32} />
+              <div className="border-2 border-dashed border-gray-300  p-6 sm:p-8 text-center hover:border-blue-400 transition-colors duration-200 cursor-pointer">
+                <Upload
+                  className="mx-auto text-gray-400 mb-3 sm:mb-4"
+                  size={32}
+                />
                 <p className="text-gray-600 text-sm sm:text-base mb-2">
                   Click to upload or drag and drop
                 </p>
