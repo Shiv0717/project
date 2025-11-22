@@ -166,10 +166,12 @@ const Announcements = () => {
             </p>
           </div>
           <div className="flex gap-3">
-            <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">
-              <Plus size={18} />
-              New Post
-            </button>
+          <Link to="/create-post">
+  <button className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 sm:px-4 py-2 rounded-lg font-medium transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 text-sm sm:text-base">
+    <Plus size={18} />
+    New Post
+  </button>
+</Link>
           </div>
         </div>
 
